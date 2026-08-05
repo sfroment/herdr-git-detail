@@ -1,0 +1,12 @@
+id = "git-detail"
+name = "Git Detail"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Rich git status (branch, dirty/staged/untracked counts, ahead/behind) reported as a $git_detail workspace sidebar token."
+platforms = ["linux", "macos"]
+
+# Background watcher: polls every workspaces, computes git status, reports
+# $git_detail. One process per herdr server restart; exits only if herdr
+# restarts it. A startup hook is one-shot, so the script itself loops.
+[[startup]]
+command = ["sh", "git-detail.sh", "watch"]
