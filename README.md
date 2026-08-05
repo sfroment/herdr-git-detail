@@ -46,7 +46,7 @@ herdr runs the `[[startup]]` hook (`git-detail.sh watch`) on server start and
 on live handoff. One background process polls every workspace's first pane
 cwd every `GIT_DETAIL_INTERVAL` seconds (default 5) and reports `$git_detail`.
 
-### From GitHub (when published)
+### From GitHub
 
 ```sh
 herdr plugin install sfroment/herdr-git-detail
